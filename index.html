@@ -4,92 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kok Shi Qi</title>
+    <link rel="icon" href="images/favicon.png" sizes='16x16'>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/anime.min.js"></script>
+    <link rel="stylesheet" href="css/dist/tailwind.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet"> 
 
     <style>
-        *{
-            margin:0;
-            box-sizing: border-box;
+        .self-container{
+            left:-300%
         }
         body{
-            height:6000px
+            height:6000px;
+            font-family: 'Playfair Display', serif;
         }
-        .container{
-            position:fixed;
-            top:0;
-            left:0;
-            width:600%;
-            height:100vh;
-            display:flex;
+        .lato{
+            font-family: 'Lato', sans-serif;
+        }
+        .hero{
+            background:#fff url('images/hero.JPG') no-repeat center center;
+            background-size:cover;
+        }
 
-        }
-        .section{
-            position:relative;
+        .hero .bg-overlay{
             width:100%;
-            height:100%;
-            padding:100px;
-            padding-right:180px;
-            display:flex;
-            flex-direction:column;
-            justify-content:center;
-            text-align: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color:bisque
+            height: 100%;
+            background:rgba(255, 255, 255, 0.466);
         }
 
-        .section:nth-child(2n){
-            background-color:aquamarine;
-            
-        }
-        nav{
-            z-index: 10;
-            background-color:white;
-            position:fixed;
-            right:0;
-            width:80px;
-            height:100vh;
-        }
-        nav .nav_link{
+        /* put in tailwind  css */
+        nav.navbar .nav-link{ 
+            text-align:center;
+            padding:0.5rem;
+            writing-mode: vertical-lr;
             display:block;
-            writing-mode: vertical-rl;
+            margin:0.5rem auto;
         }
 
+        #education{
+            background:#fff url('images/edu_background.png') no-repeat center center;
+            background-size:cover;
+        }
+
+        #experience{
+            background:#fff url('images/exp_background.png') no-repeat center center;
+            background-size:cover;
+        }
     </style>
 
 
 </head>
 <body>
-    <nav>
-        <a class="nav_link">SQ</a>
-        <a class="nav_link">Education</a>
-        <a class="nav_link">Experience</a>
-        <a class="nav_link">Project</a>
-    </nav>    
-<div class="container">
-    <div class="section">
-        <h1>section 1</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit magni omnis suscipit, laudantium dolor provident sapiente natus itaque quia voluptate reiciendis nostrum aliquid temporibus? Reiciendis vitae id modi incidunt soluta.</p>
+<nav class="lato w-24 fixed top-0 right-4 z-20 md:right-0">
+    <a id='mobile-nav-btn' class="block md:hidden w-16 mt-5 mx-auto">
+        <svg xmlns="http://www.w3.org/2000/svg" class="rounded-full bg-white inline p-2 shadow-lg w-full" 
+         viewBox="0 0 24 24" stroke-width="1.3" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="10" y1="12" x2="20" y2="12" />
+            <line x1="6" y1="18" x2="20" y2="18" />
+        </svg>
+    </a>
+    <nav class="navbar mt-4 flex flex-col bg-white w-full text-lg py-10 shadow-xl hidden md:h-screen md:text-xl md:px-2 md:mt-0 md:flex">
+        <a href='#about-me' class="nav-link">SQ</a>
+        <a href='#education' class="nav-link">education</a>
+        <a class="nav-link">experience</a>
+        <a class="nav-link">project</a>
+    </nav>
+
+    
+</nav>    
+
+<div class="self-container">
+
+    <!-- Hero -->
+    <div class="full-page hero">
+        <div class="bg-overlay relative">
+            <div class="flex justify-center items-center h-screen text-5xl">
+                <div>
+                    Hey :)
+                </div>
+            </div>
+            <p class="absolute bottom-0 left-4 text-white lato">have a good day :)</p>
+        </div>
+        
+    </div>
+
+    <!-- About Me -->
+    <div class="full-page flex-col lg:flex-row flex justify-center items-around lg:items-center" id="about-me">
+
+        <div class="text-center lg:w-1/3">
+            <img src="images/profile.JPG" alt="my profile picture" class="w-52 mx-auto md:w-64 lg:w-80">
+            <h1 class="text-3xl mb-4">Kok Shi Qi</h1>
+            <p class='text-sm'>pronounce as [ kok-shhh-qi ] ;)</p>
+
+        </div>
+
+        <div class="ml-20 mt-12 text-lg  lg:mt-0 lg:flex-grow">
+            <h1 class="text-3xl lg:text-5xl font-black mb-4">About Me</h1>
+            <hr class="inline-block mb-10 border-2 w-10 border-gray-600">
+            <div class="lato text-xl lg:text-2xl">
+                <p>Hey! I'm Shi Qi!</p>
+                <div class="grid grid-cols-2 gap-4 my-4 lg:gap-8 lg:my-8">
+                    <p>Malaysian</p>
+                    <p>Undergraduate</p>
+                    <p>Born in 2000</p>
+                    <p><span id="age">21</span>-year-old</p>
+                    <p>Programmer</p>
+                    <p>Front-end developer</p>
+                    <p>Worship Drummer</p>
+                    <p>Love music</p>
+                    <p>Love family</p>
+                    <p>Lova badminton</p>
+                </div>
+                <p>Like to try and learn new things during free time</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div class="full-page" id="education">
+        <h1 class="font-bold text-5xl m-10 ml-20">Education
+        </h1>
+
+        <div class="flex flex-col-reverse lg:flex-row lg:justify-center">
+            <div class="self-center justify-self-end">
+                <p class="border border-yellow-500 bg-white p-4 text-xl my-4 mx-4 lg:border-0">BSC (Hons) Computer Science <br>
+                <span class="text-yellow-500">Sunway University, Selangor Malaysia</span>
+            </p>
+            </div>
+
+            <div class="lg:self-center lg:pl-20 w-1/4">
+                <hr class="lg:border-black">
+            </div>
+            <div ><img src="images/sunway.png" alt="Sunway University" class="mx-auto h-60 lg:h-80"></div>
+        </div>
+
+        <div class="flex flex-col mt-10 lg:flex-row lg:justify-center">
+            <div ><img src="images/foonyew.png" alt="Foon Yew High School" class="mx-auto h-60 lg:h-80"></div>
+
+            <div class="lg:self-center lg:pr-20 w-1/4">
+                <hr class="lg:border-black">
+            </div>
+            
+            <div class="self-center justify-self-end">
+                <p class="border border-blue-500 bg-white p-4 text-xl my-4 mx-4 lg:border-0 lg:bg-transparent">
+                    <span class="text-blue-500">Foon Yew High School - Kulai, Johor</span>
+                    <br>Arts and commerce
+                </p>
+            </div>
+        </div>
 
 
     </div>
-    <div class="section">
-        <h1>section 2</h1>
+
+    <!-- Experience -->
+    <div class="full-page" id="experience">
+        <h1 class="font-bold text-5xl m-10 ml-20">Experience
+        </h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit magni omnis suscipit, laudantium dolor provident sapiente natus itaque quia voluptate reiciendis nostrum aliquid temporibus? Reiciendis vitae id modi incidunt soluta.</p>
     </div>
-    <div class="section">
-        <h1>section 3</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit magni omnis suscipit, laudantium dolor provident sapiente natus itaque quia voluptate reiciendis nostrum aliquid temporibus? Reiciendis vitae id modi incidunt soluta.</p>
-    </div>
-    <div class="section">
+
+    <!-- Projects -->
+    <div class="full-page">
         <h1>section 4</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit magni omnis suscipit, laudantium dolor provident sapiente natus itaque quia voluptate reiciendis nostrum aliquid temporibus? Reiciendis vitae id modi incidunt soluta.</p>
     </div>
-    <div class="section">
-        <h1>section 4</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit magni omnis suscipit, laudantium dolor provident sapiente natus itaque quia voluptate reiciendis nostrum aliquid temporibus? Reiciendis vitae id modi incidunt soluta.</p>
-    </div>
-    <div class="section">
+
+    <!-- Contact -->
+    <div class="full-page">
         <h1>section 4</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit magni omnis suscipit, laudantium dolor provident sapiente natus itaque quia voluptate reiciendis nostrum aliquid temporibus? Reiciendis vitae id modi incidunt soluta.</p>
     </div>
@@ -100,6 +185,15 @@
 
     var temp = 0
     var start = 0
+    
+    function windowScrollTo(position){
+        anime({
+            targets: '.self-container',
+            duration: 1500,
+            left:position,
+            easing: "easeInSine"
+        })
+    }
 
     $(window).scroll(() => {
         var scroll = $(window).scrollTop()
@@ -114,25 +208,24 @@
                 start += 100
             }
 
-            anime({
-                targets: '.container',
-                duration: 1500,
-                left:start+'%',
-                easing: "easeInSine"
-            })
+            windowScrollTo(`${start}%`)
             temp = value
             
         } else if (value < 10){
             start = 0
-            anime({
-                targets: '.container',
-                duration: 1500,
-                left:'0%',
-                easing: "easeInSine"
-            })
+            windowScrollTo(`0%`)
             temp = value
         }
     })
+
+    $(document).ready(() => {
+        $('#mobile-nav-btn').click(() =>{
+            $('nav.navbar').toggleClass('hidden')
+        })
+    })
+
+
+
 </script>
     
 </body>
