@@ -9,18 +9,19 @@
 }  
 
 @layer components{
-  .self-container{
-    @apply fixed top-0 left-0 h-screen flex;
+  /* .self-container{
+    @apply  top-0 left-0 h-screen flex; 
+    
     width:600%;
-  }
+  } */
 
   .full-page{
-    @apply relative w-full h-full;
+    @apply relative w-full h-screen;
   }
   
   @screen md {
     .full-page{
-      @apply mr-24;
+      @apply mr-16;
     }
   }
 

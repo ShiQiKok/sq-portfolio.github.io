@@ -585,24 +585,21 @@ video {
   }
 }
 
-.self-container{
-  display: flex;
-  height: 100vh;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width:600%;
-}
+/* .self-container{
+    @apply  top-0 left-0 h-screen flex; 
+    
+    width:600%;
+  } */
 
 .full-page{
-  height: 100%;
+  height: 100vh;
   position: relative;
   width: 100%;
 }
 
 @media (min-width: 768px) {
   .full-page{
-    margin-right: 6rem;
+    margin-right: 4rem;
   }
 }
 
