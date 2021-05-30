@@ -1,0 +1,27 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+
+}  
+
+@layer components{
+  .self-container{
+    @apply fixed top-0 left-0 h-screen flex;
+    width:600%;
+  }
+
+  .full-page{
+    @apply relative w-full h-full;
+  }
+  
+  @screen md {
+    .full-page{
+      @apply mr-24;
+    }
+  }
+
+}
