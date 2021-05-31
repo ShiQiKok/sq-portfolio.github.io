@@ -2,8 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, 
-    user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, 
+    user-scalable=no"
+    />
     <title>Kok Shi Qi</title>
     <link rel="icon" href="images/favicon.png" sizes="16x16" />
     <script
@@ -14,9 +17,17 @@
     <script src="js/anime.min.js"></script>
     <link rel="stylesheet" href="css/dist/tailwind.css" />
     <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
     <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
 
     <script
       type="text/javascript"
@@ -28,7 +39,7 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&family=Playfair+Display:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -52,8 +63,12 @@
         background: #fff url("images/hero.JPG") no-repeat center center;
         background-size: cover;
       }
-      #contact{
-        background: radial-gradient(36.57% 50% at 50% 50%, #4E4E4E 0%, #2E2D2D 100%);
+      #contact {
+        background: radial-gradient(
+          36.57% 50% at 50% 50%,
+          #4e4e4e 0%,
+          #2e2d2d 100%
+        );
       }
 
       .hero .bg-overlay {
@@ -81,6 +96,31 @@
         background: #fff url("images/exp_background.png") no-repeat center
           center;
         background-size: cover;
+      }
+
+      #project {
+        background: #fff url("images/project-bg.png") no-repeat center
+          center;
+        background-size: cover;
+      }
+
+      .drop-shadow {
+        text-shadow: -1px 16px 8px rgba(0, 0, 0, 0.25);
+      }
+
+      #contact_icon a{
+        margin:1rem;
+      }
+
+      #contact_icon img{
+        width:50px;
+
+      }
+
+      @media only screen and (min-width: 1024px){
+        #contact_icon a{
+          margin:2rem;
+        }
       }
     </style>
   </head>
@@ -142,7 +182,7 @@
           <p class="text-sm">pronounce as [ kok-shhh-qi ] ;)</p>
         </div>
 
-        <div class="ml-20 mt-5 text-lg lg:mt-0 lg:flex-grow">
+        <div class="ml-8 mt-5 text-lg lg:mt-0 lg:flex-grow">
           <h1 class="text-3xl lg:text-5xl font-black mb-4">About Me</h1>
           <hr class="inline-block mb-7 border-2 w-10 border-gray-600" />
           <div class="lato text-lg lg:text-xl">
@@ -166,12 +206,12 @@
 
       <!-- Education -->
       <div class="full-page" id="education">
-        <h1 class="font-bold text-3xl m-10 ml-20">Education</h1>
+        <h1 class="font-bold text-3xl m-10 ml-8">Education</h1>
 
         <div class="flex flex-col-reverse lg:flex-row lg:justify-center">
           <div class="self-center justify-self-end">
             <p
-              class="border border-yellow-500 bg-white p-4 my-4 mx-4 lg:border-0"
+              class="border border-yellow-500 bg-white p-4 my-4 mx-4 lg:border-0 lg:text-xl"
             >
               BSC (Hons) Computer Science <br />
               <span class="text-yellow-500"
@@ -207,7 +247,7 @@
 
           <div class="self-center justify-self-end">
             <p
-              class="border border-blue-500 bg-white p-4 my-4 mx-4 lg:border-0 lg:bg-transparent"
+              class="border border-blue-500 bg-white p-4 my-4 mx-4 lg:border-0 lg:bg-transparent lg:text-xl"
             >
               <span class="text-blue-500"
                 >Foon Yew High School - Kulai, Johor</span
@@ -220,19 +260,19 @@
 
       <!-- Experience -->
       <div class="full-page" id="experience">
-        <h1 class="font-bold text-3xl mt-10 ml-20">Experience</h1>
+        <h1 class="font-bold text-3xl mt-10 ml-8">Experience</h1>
 
         <div
-          class="flex flex-col h-4/5 lg:flex-row lg:justify-center lg:items-center"
+          class="flex flex-col h-4/5 p-8 lg:flex-row lg:justify-center lg:items-center"
         >
-          <div class="p-10 lg:w-1/2">
-            <div>
-              <h2>Front-end Developer Intern</h2>
+          <div class="lg:w-1/2">
+            <div class="text-xl">
+              <h2 class="font-black">Front-end Developer Intern</h2>
               <p>Spargoeats, Selangor</p>
               <p>Feb 2021 - present</p>
             </div>
-            <div>
-              <p>
+            <div class="lg:mt-12 lg:text-lg">
+              <p class="lato">
                 Spargoeats is a Foodtech start-up company located at Bandar
                 Sunway. My major job scope is creating UI designs and implement
                 it into interactive and mobile-responsive websites. I always
@@ -245,7 +285,7 @@
             </div>
           </div>
 
-          <div id="slider" class=" lg:w-1/2">
+          <div id="slider" class="md:mr-16 mt-8 lg:my-0 lg:w-1/2">
             <div id="slides" class="">
               <img src="images/work_slider1.png" alt="work project" />
               <img src="images/work_slider2.png" alt="work project" />
@@ -269,65 +309,92 @@
 
       <!-- Projects -->
       <div id="project" class="full-page">
-        <h1 class="font-bold text-3xl mt-10 ml-20">Projects</h1>
-        <h1 class="text-xl ml-20">The other academic projects </h1>
+        <h1 class="font-bold text-3xl mt-10 ml-8">Projects</h1>
+        <h1 class="text-xl ml-8">The other academic projects</h1>
 
-        <div class="flex justify-center align-center lg:mt-8">
-            <div class="w-1/3">
-                <img src="images/meWe.png" alt="meWe">
-                <div>
-                    <h1>meWE</h1>
-                    <p>
-                        An informative website providing knowledge about mental illness.
-                    </p>
-                    <h2>Technique</h2>
-                    <p>
-                        HTML5, CSS3, JavaScript, PHP
-                    </p>
-                    <h6>Individual project</h6>
-                </div>
-            
+        <div id="project-slider" class="mt-20 lg:mt-0 lg:flex lg:flex-row lg:justify-center lg:align-center lg:mt-8">
+          <div class="my-4 lg:mx-8 lg:w-1/3">
+            <img src="images/meWe.png" alt="meWe" class="w-3/5 lg:w-4/5 mx-auto"/>
+            <div class="bg-gray-100 p-2 my-2 lg:p-4 rounded-xl lg:my-4 mx-10">
+              <h1 class="text-lg lg:text-2xl font-bold">meWE</h1>
+              <p class="my-2 lg:my-4 lato lg:text-lg">
+                An informative website providing knowledge about mental illness.
+              </p>
+              <h2 class="lg:text-xl font-medium">Technique</h2>
+              <p class="my-2 lg:my-4 lato lg:text-lg">HTML5, CSS3, JavaScript, PHP</p>
+              <h6 class="font-light italic text-center text-sm lato">Individual project</h6>
             </div>
-            <div class="w-1/5">
-                <img src="images/line.png" alt="" class="mx-auto my-10"></div>
-            <div class="w-1/3">
-                <img src="images/gogocovid.png" alt="Go Go Covid!">
-                
-                <div>
-                    <h1>Go Go Covid!</h1>
-                    <p>
-                        A 2D game that aims to teach kids about the COVID-19 prevention.
-                    </p>
-                    <h2>Technique</h2>
-                    <p>
-                        Figma, Unity
-                    </p>
-                    <h6>Group project, I’m in charge of the quarantine level</h6>
-                </div>
-            
+          </div>
+
+          <div class=" my-4 lg:mx-8 lg:w-1/3">
+            <img src="images/gogocovid.png" alt="Go Go Covid!" class="w-3/5 lg:w-4/5 mx-auto"/>
+
+            <div class="bg-gray-100 p-2 my-2 lg:p-4 rounded-xl lg:my-4 mx-10">
+              <h1 class="text-lg lg:text-2xl font-bold">Go Go Covid!</h1>
+              <p class="my-2 lg:my-4 lato lg:text-lg">
+                A 2D game that aims to teach kids about the COVID-19 prevention.
+              </p>
+              <h2 lass="lg:text-xl font-medium">Technique</h2>
+              <p class="my-2 lg:my-4 lato lg:text-lg">Figma, Unity</p>
+              <h6 class="font-light italic text-center text-sm lato">Group project, I was in charge of the quarantine level</h6>
             </div>
+          </div>
         </div>
-
       </div>
 
       <!-- Contact -->
       <div id="contact" class="full-page">
-        <h1 class="font-bold text-3xl mt-10 ml-20">Contact</h1>
-       
+        <div class="flex flex-col h-full justify-around items-center">
+          <h1 class="drop-shadow font-bold text-6xl text-white">Contact</h1>
+          <div id="contact_icon" class="flex justify-center">
+            <a href="https://github.com/ShiQiKok">
+              <img src="images/git.svg" alt="GitHub" />
+            </a>
+            <a href="https://www.linkedin.com/in/shi-qi-kok-b3497a1b5/">
+              <img src="images/linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a href="https://www.facebook.com/shiqi.kok/">
+              <img src="images/fb.svg" alt="Facebook" />
+            </a>
+            <a href="https://www.instagram.com/shiqi_kok/">
+              <img src="images/ins.svg" alt="Instagram" />
+            </a>
+          </div>
+          <div>
+            <p class="text-xl lg:text-2xl text-white">Email: shiqi_kok@hotmail.com</p>
+          </div>
+        </div>
       </div>
     </div>
     <script>
       var temp = 0;
       var start = 0;
 
-    //   function windowScrollTo(position) {
-    //     anime({
-    //       targets: ".self-container",
-    //       duration: 1500,
-    //       left: position,
-    //       easing: "easeInSine",
-    //     });
-    //   }
+      function makeSlider(){
+        $('#project-slider').not('.slick-initialized').slick({
+          dots: true,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          infinite: true,
+          speed: 500,
+          fade: true,
+          cssEase: "linear",
+          })
+      }
+
+      function destroySlider(){
+        $('#project-slider').slick("unslick");
+      }
+
+      //   function windowScrollTo(position) {
+      //     anime({
+      //       targets: ".self-container",
+      //       duration: 1500,
+      //       left: position,
+      //       easing: "easeInSine",
+      //     });
+      //   }
 
       //   $(window).scroll(() => {
       //     var scroll = $(window).scrollTop();
@@ -352,6 +419,13 @@
       //       temp = value;
       //     }
       //   });
+      $(window).resize(() =>{
+        if ($(window).width() <  1024){
+          makeSlider()
+        }else{
+          destroySlider()
+        }
+      })
 
       $(document).ready(() => {
         // menu button
@@ -361,6 +435,7 @@
 
         $("#slides").slick({
           dots: true,
+          arrows: false,
           autoplay: true,
           autoplaySpeed: 2000,
           infinite: true,
@@ -368,6 +443,10 @@
           fade: true,
           cssEase: "linear",
         });
+
+        if ($(window).width() < 1024){
+          makeSlider();
+        }
 
         // experience slider
         //   $('#experience #slider #slides > img:gt(0)').hide()
