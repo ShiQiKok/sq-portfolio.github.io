@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-}
 
 @layer components {
   .hero .bg-overlay {
