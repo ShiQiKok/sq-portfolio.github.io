@@ -49,41 +49,17 @@
     />
 
     <style>
-      .self-container {
-        /* left: -300%; */
-      }
       body {
-        /* height: 6000px; */
         font-family: "Playfair Display", serif;
       }
+
       .lato {
         font-family: "Lato", sans-serif;
       }
+
       .hero {
         background: #fff url("images/hero.JPG") no-repeat center center;
         background-size: cover;
-      }
-      #contact {
-        background: radial-gradient(
-          36.57% 50% at 50% 50%,
-          #4e4e4e 0%,
-          #2e2d2d 100%
-        );
-      }
-
-      .hero .bg-overlay {
-        width: 100%;
-        height: 100%;
-        background: rgba(255, 255, 255, 0.466);
-      }
-
-      /* put in tailwind  css */
-      nav.navbar .nav-link {
-        text-align: center;
-        padding: 0.5rem;
-        writing-mode: vertical-lr;
-        display: block;
-        margin: 0.5rem auto;
       }
 
       #education {
@@ -99,28 +75,16 @@
       }
 
       #project {
-        background: #fff url("images/project-bg.png") no-repeat center
-          center;
+        background: #fff url("images/project-bg.png") no-repeat center center;
         background-size: cover;
       }
 
-      .drop-shadow {
-        text-shadow: -1px 16px 8px rgba(0, 0, 0, 0.25);
-      }
-
-      #contact_icon a{
-        margin:1rem;
-      }
-
-      #contact_icon img{
-        width:50px;
-
-      }
-
-      @media only screen and (min-width: 1024px){
-        #contact_icon a{
-          margin:2rem;
-        }
+      #contact {
+        background: radial-gradient(
+          36.57% 50% at 50% 50%,
+          #4e4e4e 0%,
+          #2e2d2d 100%
+        );
       }
     </style>
   </head>
@@ -159,7 +123,7 @@
       <div class="full-page hero">
         <div class="bg-overlay relative">
           <div class="flex justify-center items-center h-screen text-5xl">
-            <div>Hey :)</div>
+            <h1 class="font-medium">Hey :)</h1>
           </div>
           <p class="absolute bottom-0 left-4 text-white lato">
             have a good day :)
@@ -182,7 +146,7 @@
           <p class="text-sm">pronounce as [ kok-shhh-qi ] ;)</p>
         </div>
 
-        <div class="ml-8 mt-5 text-lg lg:mt-0 lg:flex-grow">
+        <div class="mt-5 text-lg lg:mt-0 lg:flex-grow">
           <h1 class="text-3xl lg:text-5xl font-black mb-4">About Me</h1>
           <hr class="inline-block mb-7 border-2 w-10 border-gray-600" />
           <div class="lato text-lg lg:text-xl">
@@ -206,7 +170,7 @@
 
       <!-- Education -->
       <div class="full-page" id="education">
-        <h1 class="font-bold text-3xl m-10 ml-8">Education</h1>
+        <h1 class="font-bold text-3xl lg:text-5xl my-10">Education</h1>
 
         <div class="flex flex-col-reverse lg:flex-row lg:justify-center">
           <div class="self-center justify-self-end">
@@ -227,7 +191,7 @@
             <img
               src="images/sunway.png"
               alt="Sunway University"
-              class="mx-auto h-40 lg:h-68"
+              class="mx-auto h-40 lg:h-60"
             />
           </div>
         </div>
@@ -237,7 +201,7 @@
             <img
               src="images/foonyew.png"
               alt="Foon Yew High School"
-              class="mx-auto h-40 lg:h-68"
+              class="mx-auto h-40 lg:h-60"
             />
           </div>
 
@@ -260,10 +224,10 @@
 
       <!-- Experience -->
       <div class="full-page" id="experience">
-        <h1 class="font-bold text-3xl mt-10 ml-8">Experience</h1>
+        <h1 class="font-bold text-3xl lg:text-5xl mt-1">Experience</h1>
 
         <div
-          class="flex flex-col h-4/5 p-8 lg:flex-row lg:justify-center lg:items-center"
+          class="flex flex-col h-4/5 my-8 justify-between lg:flex-row lg:justify-center lg:items-center lg:my-0"
         >
           <div class="lg:w-1/2">
             <div class="text-xl">
@@ -272,15 +236,15 @@
               <p>Feb 2021 - present</p>
             </div>
             <div class="lg:mt-12 lg:text-lg">
-              <p class="lato">
+              <p class="lato lg:text-xl lg:pr-4">
                 Spargoeats is a Foodtech start-up company located at Bandar
                 Sunway. My major job scope is creating UI designs and implement
                 it into interactive and mobile-responsive websites. I always
                 create the UI wireframe and prototype in Figma. After the design
                 is approved, I'll be building the website mostly using Wordpress
-                and Elementor. One of the projects is to develop an online
-                scheduled food-ordering web application. In this project, I’ve
-                explored Django and Tailwind CSS.
+                and Elementor. Other than Wordpress, I did explore Django and
+                Tailwind CSS in one of the projects, which is to develop an
+                online scheduled food-ordering web application.
               </p>
             </div>
           </div>
@@ -309,34 +273,49 @@
 
       <!-- Projects -->
       <div id="project" class="full-page">
-        <h1 class="font-bold text-3xl mt-10 ml-8">Projects</h1>
-        <h1 class="text-xl ml-8">The other academic projects</h1>
+        <h1 class="font-bold text-3xl lg:text-5xl lg:my-2">Projects</h1>
+        <h1 class="text-lg">The other academic projects</h1>
 
-        <div id="project-slider" class="mt-20 lg:mt-0 lg:flex lg:flex-row lg:justify-center lg:align-center lg:mt-8">
+        <div
+          id="project-slider"
+          class="mt-24 lg:mt-0 lg:flex lg:flex-row lg:justify-center lg:align-center lg:mt-8"
+        >
           <div class="my-4 lg:mx-8 lg:w-1/3">
-            <img src="images/meWe.png" alt="meWe" class="w-3/5 lg:w-4/5 mx-auto"/>
-            <div class="bg-gray-100 p-2 my-2 lg:p-4 rounded-xl lg:my-4 mx-10">
+            <img src="images/meWe.png" alt="meWe" class="w-4/5 mx-auto" />
+            <div
+              class="bg-gray-100 shadow-lg p-2 my-6 lg:p-4 rounded-xl lg:my-4 lg:mx-10"
+            >
               <h1 class="text-lg lg:text-2xl font-bold">meWE</h1>
               <p class="my-2 lg:my-4 lato lg:text-lg">
                 An informative website providing knowledge about mental illness.
               </p>
               <h2 class="lg:text-xl font-medium">Technique</h2>
-              <p class="my-2 lg:my-4 lato lg:text-lg">HTML5, CSS3, JavaScript, PHP</p>
-              <h6 class="font-light italic text-center text-sm lato">Individual project</h6>
+              <p class="my-2 lato lg:text-lg">HTML5, CSS3, JavaScript, PHP</p>
+              <h6 class="font-light italic text-center text-sm lato">
+                Individual project
+              </h6>
             </div>
           </div>
 
-          <div class=" my-4 lg:mx-8 lg:w-1/3">
-            <img src="images/gogocovid.png" alt="Go Go Covid!" class="w-3/5 lg:w-4/5 mx-auto"/>
+          <div class="my-4 lg:mx-8 lg:w-1/3">
+            <img
+              src="images/gogocovid.png"
+              alt="Go Go Covid!"
+              class="w-4/5 mx-auto"
+            />
 
-            <div class="bg-gray-100 p-2 my-2 lg:p-4 rounded-xl lg:my-4 mx-10">
+            <div
+              class="bg-gray-100 shadow-lg p-2 my-6 lg:p-4 rounded-xl lg:my-4 lg:mx-10"
+            >
               <h1 class="text-lg lg:text-2xl font-bold">Go Go Covid!</h1>
               <p class="my-2 lg:my-4 lato lg:text-lg">
                 A 2D game that aims to teach kids about the COVID-19 prevention.
               </p>
-              <h2 lass="lg:text-xl font-medium">Technique</h2>
-              <p class="my-2 lg:my-4 lato lg:text-lg">Figma, Unity</p>
-              <h6 class="font-light italic text-center text-sm lato">Group project, I was in charge of the quarantine level</h6>
+              <h2 class="lg:text-xl font-medium">Technique</h2>
+              <p class="my-2 lato lg:text-lg">Figma, Unity</p>
+              <h6 class="font-light italic text-center text-sm lato">
+                Group project, I was in charge of the quarantine level
+              </h6>
             </div>
           </div>
         </div>
@@ -361,7 +340,9 @@
             </a>
           </div>
           <div>
-            <p class="text-xl lg:text-2xl text-white">Email: shiqi_kok@hotmail.com</p>
+            <p class="text-xl lg:text-2xl text-white">
+              Email: shiqi_kok@hotmail.com
+            </p>
           </div>
         </div>
       </div>
@@ -370,8 +351,8 @@
       var temp = 0;
       var start = 0;
 
-      function makeSlider(){
-        $('#project-slider').not('.slick-initialized').slick({
+      function makeSlider() {
+        $("#project-slider").not(".slick-initialized").slick({
           dots: true,
           arrows: false,
           autoplay: true,
@@ -380,11 +361,11 @@
           speed: 500,
           fade: true,
           cssEase: "linear",
-          })
+        });
       }
 
-      function destroySlider(){
-        $('#project-slider').slick("unslick");
+      function destroySlider() {
+        $("#project-slider").slick("unslick");
       }
 
       //   function windowScrollTo(position) {
@@ -419,13 +400,13 @@
       //       temp = value;
       //     }
       //   });
-      $(window).resize(() =>{
-        if ($(window).width() <  1024){
-          makeSlider()
-        }else{
-          destroySlider()
+      $(window).resize(() => {
+        if ($(window).width() < 1024) {
+          makeSlider();
+        } else {
+          destroySlider();
         }
-      })
+      });
 
       $(document).ready(() => {
         // menu button
@@ -444,7 +425,7 @@
           cssEase: "linear",
         });
 
-        if ($(window).width() < 1024){
+        if ($(window).width() < 1024) {
           makeSlider();
         }
 

@@ -1,28 +1,49 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+}
 
-@layer base{
-
-}  
-
-@layer components{
-  /* .self-container{
-    @apply  top-0 left-0 h-screen flex; 
-    
-    width:600%;
-  } */
-
-  .full-page{
-    @apply relative w-full h-screen;
+@layer components {
+  .hero .bg-overlay {
+    @apply h-full w-full;
+    background: rgba(255, 255, 255, 0.466);
   }
-  
+
+  nav.navbar .nav-link {
+    @apply text-center p-2 block my-2 mx-auto;
+    writing-mode: vertical-lr;
+  }
+
+  #contact_icon img {
+    width: 50px;
+  }
+
+  .drop-shadow {
+    text-shadow: -1px 16px 8px rgba(0, 0, 0, 0.25);
+  }
+
+  #contact_icon a {
+    @apply m-4;
+  }
+
+  .full-page {
+    @apply relative w-full h-screen p-8;
+  }
+  .full-page:first-child {
+    @apply p-0;
+  }
+
   @screen md {
-    .full-page{
-      @apply mr-16;
+    .full-page {
+      @apply mr-16 p-6;
     }
   }
 
+  @screen lg {
+    #contact_icon a {
+      margin: 2rem;
+    }
+  }
 }

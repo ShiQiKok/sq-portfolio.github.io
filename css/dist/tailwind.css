@@ -585,21 +585,57 @@ video {
   }
 }
 
-/* .self-container{
-    @apply  top-0 left-0 h-screen flex; 
-    
-    width:600%;
-  } */
+.hero .bg-overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.466);
+}
 
-.full-page{
+nav.navbar .nav-link {
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem;
+  text-align: center;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+}
+
+#contact_icon img {
+  width: 50px;
+}
+
+.drop-shadow {
+  text-shadow: -1px 16px 8px rgba(0, 0, 0, 0.25);
+}
+
+#contact_icon a {
+  margin: 1rem;
+}
+
+.full-page {
   height: 100vh;
+  padding: 2rem;
   position: relative;
   width: 100%;
 }
 
+.full-page:first-child {
+  padding: 0px;
+}
+
 @media (min-width: 768px) {
-  .full-page{
+  .full-page {
     margin-right: 4rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  #contact_icon a {
+    margin: 2rem;
   }
 }
 
