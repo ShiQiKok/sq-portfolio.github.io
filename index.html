@@ -36,9 +36,12 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&family=Playfair+Display:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Playfair+Display:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <!-- Fullpage.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.css" integrity="sha512-RVmrWua3k1yTDEOg4Yzs2bK5+Thh7nM6jrhDq/6/5/Mwa0JbYe4pP4YMK5sqghKz01T3DgrwYc57Jaf1PSurCg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js" integrity="sha512-HqbDsHIJoZ36Csd7NMupWFxC7e7aX2qm213sX+hirN+yEx/eUNlZrTWPs1dUQDEW4fMVkerv1PfMohR1WdFFJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -49,8 +52,16 @@
     />
 
     <style>
+      html{
+        scroll-behavior: smooth;
+      }
+      
+      #fullpage-container{
+        transition:1s cubic-bezier(0.5, 0, 0.5, 1);
+      }
       body {
         font-family: "Playfair Display", serif;
+        overflow: hidden;
       }
 
       .lato {
@@ -89,7 +100,7 @@
     </style>
   </head>
   <body>
-    <nav class="lato w-16 fixed top-0 right-4 z-20 md:right-0">
+    <nav class="lato font-light w-16 fixed top-0 right-4 z-20 md:right-0">
       <a id="mobile-nav-btn" class="block md:hidden w-10 mt-5 mx-auto">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -118,14 +129,14 @@
       </nav>
     </nav>
 
-    <div class="self-container">
+    <div id="fullpage-container">
       <!-- Hero -->
       <div class="full-page hero">
         <div class="bg-overlay relative">
           <div class="flex justify-center items-center h-screen text-5xl">
             <h1 class="font-medium">Hey :)</h1>
           </div>
-          <p class="absolute bottom-0 left-4 text-white lato">
+          <p class="absolute bottom-0 left-4 text-white lato font-light">
             have a good day :)
           </p>
         </div>
@@ -149,7 +160,7 @@
         <div class="mt-5 text-lg lg:mt-0 lg:flex-grow">
           <h1 class="text-3xl lg:text-5xl font-black mb-4">About Me</h1>
           <hr class="inline-block mb-7 border-2 w-10 border-gray-600" />
-          <div class="lato text-lg lg:text-xl">
+          <div class="lato font-light text-lg lg:text-xl">
             <p>Hey! I'm Shi Qi!</p>
             <div class="grid grid-cols-2 gap-2 my-2 lg:gap-8 lg:my-8">
               <p>Malaysian</p>
@@ -236,15 +247,20 @@
               <p>Feb 2021 - present</p>
             </div>
             <div class="lg:mt-12 lg:text-lg">
-              <p class="lato lg:text-xl lg:pr-4">
+              <p class="lato font-light lg:text-xl lg:pr-4">
                 Spargoeats is a Foodtech start-up company located at Bandar
                 Sunway. My major job scope is creating UI designs and implement
                 it into interactive and mobile-responsive websites. I always
-                create the UI wireframe and prototype in Figma. After the design
-                is approved, I'll be building the website mostly using Wordpress
-                and Elementor. Other than Wordpress, I did explore Django and
-                Tailwind CSS in one of the projects, which is to develop an
-                online scheduled food-ordering web application.
+                create the UI wireframe and prototype in
+                <span class="text-pink-600 font-normal">Figma</span>. After the
+                design is approved, I'll be building the website mostly using
+                <span class="text-blue-800 font-normal">Wordpress</span> and
+                <span class="text-pink-700 font-normal">Elementor</span>. Other
+                than Wordpress, I did explore
+                <span class="text-green-600 font-normal">Django </span>and
+                <span class="text-blue-400 font-normal">Tailwind CSS</span> in
+                one of the projects, which is to develop an online scheduled
+                food-ordering web application.
               </p>
             </div>
           </div>
@@ -286,11 +302,13 @@
               class="bg-gray-100 shadow-lg p-2 my-6 lg:p-4 rounded-xl lg:my-4 lg:mx-10"
             >
               <h1 class="text-lg lg:text-2xl font-bold">meWE</h1>
-              <p class="my-2 lg:my-4 lato lg:text-lg">
+              <p class="my-2 lg:my-4 lato font-light lg:text-lg">
                 An informative website providing knowledge about mental illness.
               </p>
               <h2 class="lg:text-xl font-medium">Technique</h2>
-              <p class="my-2 lato lg:text-lg">HTML5, CSS3, JavaScript, PHP</p>
+              <p class="my-2 lato font-light lg:text-lg">
+                HTML5, CSS3, JavaScript, PHP
+              </p>
               <h6 class="font-light italic text-center text-sm lato">
                 Individual project
               </h6>
@@ -308,11 +326,11 @@
               class="bg-gray-100 shadow-lg p-2 my-6 lg:p-4 rounded-xl lg:my-4 lg:mx-10"
             >
               <h1 class="text-lg lg:text-2xl font-bold">Go Go Covid!</h1>
-              <p class="my-2 lg:my-4 lato lg:text-lg">
+              <p class="my-2 lg:my-4 lato font-light lg:text-lg">
                 A 2D game that aims to teach kids about the COVID-19 prevention.
               </p>
               <h2 class="lg:text-xl font-medium">Technique</h2>
-              <p class="my-2 lato lg:text-lg">Figma, Unity</p>
+              <p class="my-2 lato font-light lg:text-lg">Figma, Unity</p>
               <h6 class="font-light italic text-center text-sm lato">
                 Group project, I was in charge of the quarantine level
               </h6>
@@ -324,7 +342,7 @@
       <!-- Contact -->
       <div id="contact" class="full-page">
         <div class="flex flex-col h-full justify-around items-center">
-          <h1 class="drop-shadow font-bold text-6xl text-white">Contact</h1>
+          <h1 class="drop-shadow font-bold text-5xl lg:text-8xl text-white">Contact</h1>
           <div id="contact_icon" class="flex justify-center">
             <a href="https://github.com/ShiQiKok">
               <img src="images/git.svg" alt="GitHub" />
@@ -368,38 +386,44 @@
         $("#project-slider").slick("unslick");
       }
 
-      //   function windowScrollTo(position) {
-      //     anime({
-      //       targets: ".self-container",
-      //       duration: 1500,
-      //       left: position,
-      //       easing: "easeInSine",
-      //     });
-      //   }
+      var num_fullpage = $('.full-page').length
+      var scroll_dir = ""
+      var hold = false
 
-      //   $(window).scroll(() => {
-      //     var scroll = $(window).scrollTop();
-      //     var dh = $(document).height();
-      //     var wh = $(window).height();
-      //     var value = Math.round((scroll / (dh - wh)) * 100);
+      function myScrollY(object){
 
-      //     if (value % 10 == 0 && (value / 10) % 2 == 1) {
-      //       if (temp < value) {
-      //         // scroll down
-      //         start -= 100;
-      //       } else if (temp > value) {
-      //         //scroll up
-      //         start += 100;
-      //       }
+        
+        var vh = $(window).height()/100
+        var vmin = Math.min(vh, $(window).width())/100
+        var controller = object[0]
+        var controller_height = parseInt($(controller).outerHeight()/ vh) || parseInt($(controller).outerHeight()/ vmin)
 
-      //       windowScrollTo(`${start}%`);
-      //       temp = value;
-      //     } else if (value < 10) {
-      //       start = 0;
-      //       windowScrollTo(`0%`);
-      //       temp = value;
-      //     }
-      //   });
+
+        // console.log(controller)
+        var scroll_volumn = parseInt(controller.style.transform.replace('translateY(', ''));
+        
+
+
+        if (scroll_dir === 'up' && Math.abs(scroll_volumn) < (controller_height - controller_height/num_fullpage)){
+          scroll_volumn = scroll_volumn - 100
+
+        
+        } else if (scroll_dir === 'down' && scroll_volumn < 0) {
+          scroll_volumn = scroll_volumn + 100
+
+        } else if (scroll_dir === 'top'){
+          scroll_volumn = 0
+        }
+
+        if (!hold){
+          hold = true
+          controller.style.transform = 'translateY(' + scroll_volumn + 'vh)';
+          setTimeout(() => {
+            hold = false
+          }, 1000)
+        }
+      }
+      
       $(window).resize(() => {
         if ($(window).width() < 1024) {
           makeSlider();
@@ -409,6 +433,20 @@
       });
 
       $(document).ready(() => {
+
+        $('#fullpage-container').css("transform", "translateY(0)")
+        $('#fullpage-container').on('wheel', (e) => {
+          if (e.originalEvent.deltaY < 0){
+            scroll_dir = 'down'
+          } else if (e.originalEvent.deltaY > 0){
+            scroll_dir = 'up'
+          }
+          e.stopPropagation()
+          myScrollY($('#fullpage-container'))
+        })
+
+
+
         // menu button
         $("#mobile-nav-btn").click(() => {
           $("nav.navbar").toggleClass("hidden");
@@ -429,17 +467,6 @@
           makeSlider();
         }
 
-        // experience slider
-        //   $('#experience #slider #slides > img:gt(0)').hide()
-
-        //     setInterval(() => {
-        //         $('#experience #slider > img:first')
-        //         .fadeOut(1000)
-        //         .next()
-        //         .fadeIn(2000)
-        //         .end()
-        //         .appendTo('#experience #slider');
-        //     },2000)
       });
     </script>
   </body>
