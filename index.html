@@ -55,6 +55,9 @@
       html{
         scroll-behavior: smooth;
       }
+      a.nav-link{
+        cursor:pointer;
+      }
       
       #fullpage-container{
         transition:1s cubic-bezier(0.5, 0, 0.5, 1);
@@ -121,11 +124,11 @@
       <nav
         class="navbar mt-4 flex flex-col bg-white w-full py-5 shadow-xl hidden md:h-screen md:text-lg md:px-2 md:mt-0 md:flex"
       >
-        <a href="#about-me" class="nav-link">SQ</a>
-        <a href="#education" class="nav-link">education</a>
-        <a href="#experience" class="nav-link">experience</a>
-        <a href="#project" class="nav-link">project</a>
-        <a href="#contact" class="nav-link">contact</a>
+        <a  class="nav-link">SQ</a>
+        <a class="nav-link">education</a>
+        <a class="nav-link">experience</a>
+        <a class="nav-link">project</a>
+        <a class="nav-link">contact</a>
       </nav>
     </nav>
 
@@ -433,7 +436,7 @@
       });
 
       $(document).ready(() => {
-
+        var scroll = 0
         $('#fullpage-container').css("transform", "translateY(0)")
         $('#fullpage-container').on('wheel', (e) => {
           if (e.originalEvent.deltaY < 0){
@@ -443,6 +446,16 @@
           }
           e.stopPropagation()
           myScrollY($('#fullpage-container'))
+        })
+        var index = 0
+
+        $("a.nav-link").click(function(e) {
+            // console.log($(this).index())
+            index = $(this).index()
+            scroll = -(index + 1) * 100 + 'vh'
+            // console.log(index + " => " + scroll)
+            $('#fullpage-container').css("transform", `translateY(${scroll})`)
+          
         })
 
 
