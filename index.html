@@ -9,30 +9,32 @@
     />
     <title>Kok Shi Qi</title>
     <link rel="icon" href="images/favicon.png" sizes="16x16" />
+    <link rel="stylesheet" href="css/dist/tailwind.css" />
+    <!-- Jquery -->
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+    <!-- Anime.js -->
     <script src="js/anime.min.js"></script>
-    <link rel="stylesheet" href="css/dist/tailwind.css" />
-    <!-- Add the slick-theme.css if you want default styling -->
+    
+    <!-- Slick -->
     <link
       rel="stylesheet"
       type="text/css"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
-    <!-- Add the slick-theme.css if you want default styling -->
     <link
       rel="stylesheet"
       type="text/css"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
     />
-
     <script
       type="text/javascript"
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
+
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -42,6 +44,7 @@
     <!-- Fullpage.js -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.css" integrity="sha512-RVmrWua3k1yTDEOg4Yzs2bK5+Thh7nM6jrhDq/6/5/Mwa0JbYe4pP4YMK5sqghKz01T3DgrwYc57Jaf1PSurCg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js" integrity="sha512-HqbDsHIJoZ36Csd7NMupWFxC7e7aX2qm213sX+hirN+yEx/eUNlZrTWPs1dUQDEW4fMVkerv1PfMohR1WdFFJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -157,7 +160,7 @@
             class="w-40 mx-auto md:w-52 lg:w-64"
           />
           <h1 class="text-3xl mb-4">Kok Shi Qi</h1>
-          <p class="text-sm">pronounce as [ kok-shhh-qi ] ;)</p>
+          <p class="text-sm">you can call me SQ ;)</p>
         </div>
 
         <div class="mt-5 text-lg lg:mt-0 lg:flex-grow">
@@ -171,11 +174,12 @@
               <p>Born in 2000</p>
               <p><span id="age">21</span>-year-old</p>
               <p>Programmer</p>
-              <p>Front-end developer</p>
+              <p>Computer Science Student</p>
+              <p>42KL Pisciner</p>
               <p>Worship Drummer</p>
               <p>Love music</p>
               <p>Love family</p>
-              <p>Lova badminton</p>
+              <p>Love badminton</p>
             </div>
             <p>Like to try and learn new things during free time</p>
           </div>
@@ -236,6 +240,7 @@
         </div>
       </div>
 
+
       <!-- Experience -->
       <div class="full-page" id="experience">
         <h1 class="font-bold text-3xl lg:text-5xl mt-1">Experience</h1>
@@ -293,7 +298,7 @@
       <!-- Projects -->
       <div id="project" class="full-page">
         <h1 class="font-bold text-3xl lg:text-5xl lg:my-2">Projects</h1>
-        <h1 class="text-lg">The other academic projects</h1>
+        <h1 class="text-lg">The other academic projects (a lot more to come!)</h1>
 
         <div
           id="project-slider"
@@ -333,7 +338,7 @@
                 A 2D game that aims to teach kids about the COVID-19 prevention.
               </p>
               <h2 class="lg:text-xl font-medium">Technique</h2>
-              <p class="my-2 lato font-light lg:text-lg">Figma, Unity</p>
+              <p class="my-2 lato font-light lg:text-lg">Figma, Unity, C#</p>
               <h6 class="font-light italic text-center text-sm lato">
                 Group project, I was in charge of the quarantine level
               </h6>
@@ -341,6 +346,14 @@
           </div>
         </div>
       </div>
+      
+    <!-- Activities
+    <div class="full-page" id="activities">
+        <h1 class="font-bold text-3xl lg:text-5xl lg:my-2">Activities</h1>
+        <h1 class="text-lg">my life!</h1>
+
+       
+    </div> -->
 
       <!-- Contact -->
       <div id="contact" class="full-page">
@@ -389,13 +402,11 @@
         $("#project-slider").slick("unslick");
       }
 
-      var num_fullpage = $('.full-page').length
-      var scroll_dir = ""
-      var hold = false
+      var num_fullpage = $('.full-page').length;
+      var scroll_dir = "";
+      var hold = false;
 
       function myScrollY(object){
-
-        
         var vh = $(window).height()/100
         var vmin = Math.min(vh, $(window).width())/100
         var controller = object[0]
@@ -421,9 +432,58 @@
           controller.style.transform = 'translateY(' + scroll_volumn + 'vh)';
           setTimeout(() => {
             hold = false
-          }, 1000)
+          }, 1350)
         }
       }
+      
+      // function mySwipeY(object){
+      //   console.log("You swipe")
+      //   var threshold = 100;
+      //   var max_time = 500;
+      //   var slack = 50; 
+      //   var start_x, start_y, start_time, diff_x, diff_y, elapsed_time, swipe_direction;
+
+
+      //   $(object).on('touchstart', function(event){
+      //     var start_touchlist = e.changedTouches[0] ;
+      //     start_x = touchlist.pageX; // starting X coordinate
+      //     start_y = touchlist.pageY;// starting Y coordinate
+      //     start_time = new Date().getTime();
+
+      //   },false)
+
+      //   $(object).on('touchend', function(event){
+      //     var end_touchlist = e.changedTouches[0];
+      //     diff_x = end_touchlist.pageX - start_x;
+      //     diff_y = end_touchlist.pageY - start_y;
+      //     elapsed_time = new Date().getTime() - start_time;
+
+      //     //determine directions
+      //     if (elapsed_time <= max_time){
+      //       if (Math.abs(diff_x) >= threshold && Math.abs(diff_y) <= slack){
+      //         swipe_direction = (diff_x < 0) ? 'left' : 'right';
+      //       }else if(Math.abs(diff_y) >= threshlod && Math.abs(diff_x) <= slack){
+      //         swipe_direction = (diff_y < 0) ? 'up' : 'down';
+      //       }
+
+      //       if (object.id === 'fullpage-container'){
+      //         if (swipe_direction === 'up'){
+      //           scroll_dir = swipe_direction;
+      //           myScrollY(obj);
+      //         } else if (swipe_direction === 'down' && object.style.transform !== 'translateY(0)'){
+      //           scroll_dir = swipe_direction;
+      //           myScrollY(obj);
+      //         }
+      //         event.stopPropagation();
+      //       }
+      //     }
+      //   },false)
+
+      //   $(object).on('touchmove', function(event){
+      //     event.preventDefault();
+      //   })
+
+      // }
       
       $(window).resize(() => {
         if ($(window).width() < 1024) {
@@ -431,20 +491,37 @@
         } else {
           destroySlider();
         }
+
       });
 
+
       $(document).ready(() => {
-        
         $('#fullpage-container').css("transform", "translateY(0)")
-        $('#fullpage-container').on('wheel', (e) => {
-          if (e.originalEvent.deltaY < 0){
-            scroll_dir = 'down'
-          } else if (e.originalEvent.deltaY > 0){
-            scroll_dir = 'up'
+
+        $('#fullpage-container').on('wheel', (e) =>{
+          if ($(window).width() > 768){
+            if (e.originalEvent.deltaY < 0){
+              scroll_dir = 'down'
+            } else if (e.originalEvent.deltaY > 0){
+              scroll_dir = 'up'
+            }
+            e.stopPropagation();
+            myScrollY($('#fullpage-container'))
+          }else{
+            $('body').css("overflow", "visible")
           }
-          e.stopPropagation()
-          myScrollY($('#fullpage-container'))
         })
+
+
+        // $('#fullpage-container').on('swipe', (e) => {
+        //   console.log("swipe")
+        //   // mySwipeY($('#fullpage-container')[0])
+        // })
+        // var container = document.getElementById('fullpage-container')
+        // container.addEventListener('wheel', myScrollY(container))
+        
+        
+
         var scroll = 0
         var index = 0
 
@@ -456,8 +533,6 @@
             $('#fullpage-container').css("transform", `translateY(${scroll})`)
           
         })
-
-
 
         // menu button
         $("#mobile-nav-btn").click(() => {
